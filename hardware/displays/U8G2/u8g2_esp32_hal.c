@@ -52,6 +52,7 @@ uint8_t u8g2_esp32_spi_byte_cb(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void 
 		  bus_config.miso_io_num   = -1; // MISO
 		  bus_config.quadwp_io_num = -1; // Not used
 		  bus_config.quadhd_io_num = -1; // Not used
+		  bus_config.flags         = 0;
 		  //ESP_LOGI(TAG, "... Initializing bus.");
 		  ESP_ERROR_CHECK(spi_bus_initialize(HSPI_HOST, &bus_config, 1));
 
